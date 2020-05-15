@@ -1,16 +1,23 @@
-<form class="form-horizontal" action="/upload" method="post" enctype="multipart/form-data">
-  <div class="form-group">
-  <label class="btn btn-default btn-file">
-    <input type="file" name="files[]" value="Upload" multiple />
-  </label>
+<div class="container border-dark border-top-0 p-5">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="col-md-12">
+        <form class="form-horizontal" action="/upload" method="post" enctype="multipart/form-data">
+          <h3 class="text-center mb-4">Upload</h3>
+          <div class="form-group">
+            <input type="file" name="files[]" value="Upload" multiple />
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="gallery">
+              <input class="form-check-input" type="checkbox" name="gallery" id="gallery">
+              Post to public <a href="/gallery" target="_blank">gallery</a>?
+            </label>
+          </div>
+          <div style="margin-top: 20px" class="form-group">
+            <button class="btn btn-secondary btn-spinz btn-lg btn-block" type="submit" value="Upload"><i class="spinz fa"></i>Upload</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="form-check">
-  <input class="form-check-input" type="checkbox" name="gallery" id="gallery">
-  <label class="form-check-label" for="gallery">
-    Post to public <a href="/gallery">gallery</a>?
-  </label>
-  </div>
-  <div style="margin-top: 20px" class="form-group">
-    <button class="btn btn-secondary btn-spinz" style="width: 142px;" type="submit" value="Upload"><i class="spinz fa"></i>Upload</button>
-  </div>
-</form>
+</div>
